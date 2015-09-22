@@ -40,10 +40,11 @@ setup(
     zip_safe=False,
     install_requires=[
         'brasil.gov.tiles',
-        'collective.portlet.calendar',
+        # FIXME: https://github.com/plonegovbr/brasil.gov.agenda/issues/51
+        'collective.portlet.calendar < 1.0b3',
         'plone.api',
         'plone.app.content',
-        'plone.app.contenttypes<1.1a1',
+        'plone.app.contenttypes < 1.1a1',
         'plone.app.dexterity [grok]',
         'plone.app.portlets',
         'plone.app.referenceablebehavior',
@@ -52,13 +53,13 @@ setup(
         'plone.app.vocabularies',
         'plone.behavior',
         # FIXME: https://github.com/plonegovbr/brasil.gov.agenda/issues/32
-        'plone.dexterity<2.2.4',
+        'plone.dexterity < 2.2.4',
         'plone.directives.form',
         'plone.portlets',
         'plone.supermodel >=1.2.3',
         'plone.uuid',
         'Products.CMFCore',
-        'Products.CMFPlone >=4.3',
+        'Products.CMFPlone >= 4.3',
         'Products.GenericSetup',
         'setuptools',
         'zope.component',
@@ -68,7 +69,7 @@ setup(
     extras_require={
         'test': [
             'plone.app.robotframework',
-            'plone.app.testing [robot] >=4.2.2',
+            'plone.app.testing [robot] >= 4.2.2',
             'plone.browserlayer',
             'plone.testing',
         ],
